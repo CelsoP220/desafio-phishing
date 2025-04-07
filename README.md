@@ -19,17 +19,7 @@ python app.py
 3. Acesse no navegador:
 ```
 http://localhost:5000
-```
 
-## 📁 Estrutura
-
-```
-.
-├── app.py
-├── logins.txt  # Gerado automaticamente com os dados inseridos
-├── templates
-│   └── login.html
-└── README.md
 ```
 
 ## 🛡️ Importante
